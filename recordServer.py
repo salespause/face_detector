@@ -5,17 +5,17 @@ from bottle import route, run
 rec = RecordVoice()
 @route('/record/start')
 def startRec():
-    if test.isRecording == 0:
-        # test.start()
-        test.startRecording()
+    if reg.isRecording == 0:
+        # reg.start()
+        reg.startRecording()
         return "Voice Recording Started"
     else:
         return "Voice Recording has Already Started"
 
 @route('/record/end')
 def endRec():
-    if test.isRecording == 1:
-        test.endRecording()
+    if reg.isRecording == 1:
+        reg.endRecording()
         return "Voice Recording Finished"
     else: 
         return "Recording is Not Started yet"

@@ -13,6 +13,7 @@ class Post:
         files = {'upload_file': open(file_path, "rb")}
         res = requests.post(self.target_url, files=files)
         print("送信done")
+        return res
 
 if __name__ == "__main__":
     poster = Post("http://localhost:3000")
